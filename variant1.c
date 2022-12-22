@@ -4,12 +4,14 @@
 
 int main() {
     bool go = false;
-    int A[N] = {2, 12, 3, 6, 7, 9, 3, 21, 8, 90, 4, 1}, C[N];
+    int A[N] = {2, 12, 3, 6, 7, 9, 3, 21, 8, 90, 4, 1}, C[N], i;
     int nep = 0; // перший непарний елемент масиву A
 
     printf("Заданий масив A:\n");
-    for (int i = 0; i < N; i++) {
+    i = 0;
+    while (i < N) {
         printf("A[%i] = %i\n", i, A[i]);
+        i++;
     }
 
     if (N < 2) {
@@ -19,7 +21,8 @@ int main() {
     }
 
     printf("Новоутворений масив C:\n");
-    for (int i = 0; i < N; i++) {
+    i = 0;
+    while (i < N) {
         if (go == true) {
             // Від другого непарного елемента
             C[i] = A[i] / nep;
@@ -35,6 +38,7 @@ int main() {
             C[i] = A[i];
 
         printf("C[%i] = %i\n", i, C[i]);
+        i++;
     }
 
     return 0;
