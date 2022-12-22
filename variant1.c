@@ -1,10 +1,10 @@
 #include <stdbool.h>
 #include <stdio.h>
-#define N 12
+#define N 2
 
 int main() {
     bool go = false;
-    int A[N] = {2, 12, 3, 6, 7, 9, 3, 21, 8, 90, 4, 1}, C[N], i;
+    int A[N] = {2, 12}, C[N], i;
     int nep = 0; // перший непарний елемент масиву A
 
     printf("Заданий масив A:\n");
@@ -14,7 +14,7 @@ int main() {
         i++;
     }
 
-    if (N < 2) {
+    if (N < 3) {
         printf("Недостатньо елементів для створення масиву С ");
         printf("(мінімум 3 елемента)\n");
         return 1;
